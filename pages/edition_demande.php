@@ -13,3 +13,4 @@ include('../common/header.php');
 <div class="edition_demande_form">
     <?php include('../models/req_edition.php'); ?>
 </div>
+<?php require('../common/footer.php'); ?>

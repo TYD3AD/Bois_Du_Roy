@@ -68,3 +68,4 @@ $matricule = $_SESSION['matricule'];
         }
         ?>
 </div>
+<?php require('../common/footer.php'); ?>

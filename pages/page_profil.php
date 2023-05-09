@@ -72,3 +72,4 @@ require('../models/session.php');
 
     </div>
 </div>
+<?php require('../common/footer.php'); ?>
