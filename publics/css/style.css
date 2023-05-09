@@ -1,0 +1,911 @@
+/* Général */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(253, 253, 252);
+  height: 90vh;
+}
+
+main {
+  display: flex;
+}
+
+
+.btn_form {
+  appearance: none;
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  border-radius: 50%;
+  background: #ffffff00;
+  border: 1px solid #ffffff;
+  box-shadow: inset 0 .2em 1em rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.btn_form:focus {
+  border: none;
+  outline: none;
+  border: 1px solid #ffffff;
+}
+
+.btn_form:checked:before,
+.btn_form:checked:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0.4em;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+
+.btn_form:checked:before {
+  background: #ffffff;
+}
+
+
+
+/* FIN Général */
+
+
+
+/* Connexion */
+
+.partieGauche {
+  display: flex;
+  background-color: #ffffff;
+  width: 50vw;
+  height: 100vh;
+}
+
+.partieGauche>img {
+  width: 50vw;
+}
+
+.partieDroite {
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #548043;
+  width: 50vw;
+}
+
+.formConnexion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  width: 60%;
+  border-radius: 10px;
+  background-color: #D9D9D9;
+  box-shadow: 2px 6px 4px 0 rgb(0 0 0 / 25%);
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.formInput>input {
+  width: 80%;
+  height: 30px;
+  margin: 20px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  font-size: large;
+}
+
+.formButton {
+  display: flex;
+  flex-direction: column;
+}
+
+#seConnecter {
+  margin: 50px;
+  background-color: white;
+  border: 0px;
+  font-size: large;
+  padding: 15px;
+}
+
+/* FIN Connexion */
+
+/* Changement mdp */
+
+.chgmntMDP {
+  width: 80%;
+}
+
+.chgmntMDP>h2 {
+  color: white;
+  text-align: center;
+}
+
+.form_changement_mdp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  width: 60%;
+  border-radius: 10px;
+  background-color: #D9D9D9;
+  box-shadow: 2px 6px 4px 0 rgb(0 0 0 / 25%);
+}
+
+.champs_mdp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.champs_mdp>input {
+  width: 80%;
+  height: 30px;
+  margin: 20px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  font-size: large;
+}
+
+.champs_mdp>label {
+  width: 100%;
+  text-align: left;
+  padding: 0 0 0 80px;
+}
+
+#btn_modif_mdp {
+  border-radius: 20px;
+  color: #000000;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 8px 12px;
+  width: 250px;
+  margin: 25px 0;
+  background-color: #ffffff;
+  color: #548043;
+  transition: transform 1s ease;
+  border: #333 solid 2px;
+}
+
+#btn_modif_mdp:hover {
+  background-color: #548043;
+  color: white;
+  transition: all 1s ease;
+  transform: scale(1.1);
+  border: 2px solid #ccc;
+
+}
+
+/* FIN CHANGEMENT MDP */
+
+/* HEADER */
+
+.button_notif {
+  background-color: transparent;
+  border: 0px;
+  margin: 0 20px 0 0;
+  width: 60px;
+  height: 60px;
+  border: solid 4px #FF4754;
+  border-radius: 100%;
+}
+
+.button_notif:hover {
+  cursor: pointer;
+}
+
+.img_notif {
+  height: 30px;
+  width: 30px;
+}
+
+/* pop up qui s'affiche au clic de la photo de profil */
+.compte {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 30px;
+  background-color: #63984f;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  border: solid 2px rgb(255, 255, 255);
+  border-radius: 10px;
+  z-index: 2;
+  height: auto;
+  width: 300px;
+  padding: 10px;
+}
+
+.compte > form > button, .compte > a {
+  text-decoration: none;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  color: #333;
+  font-size: 18px;
+  padding: 8px 12px;
+  width: 250px;
+  margin: 25px 0;
+  background-color: #548043;
+  color: white;
+  transition: transform 1s ease;
+}
+
+.compte > form > button:hover, .compte > a:hover{
+  background-color: #ffffff;
+  color: #548043;
+  transition: all 1s ease;
+  transform: scale(1.1);
+  border: #333 solid 2px;
+}
+.li_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #548043;
+  height: 10vh;
+  width: 100vw;
+}
+
+.section_header {
+  color: white;
+  text-decoration: none;
+  font-size: large;
+}
+
+.a_logo_header {
+  height: 100%;
+}
+
+.logo_header {
+  height: inherit;
+}
+
+.a_P_P_header {
+  height: 90%;
+  margin: 0 20px 0 0;
+  background-color: transparent;
+  border: 0px;
+
+}
+
+.P_P_header {
+  height: inherit;
+  border-radius: 50%;
+}
+
+.div_gestion {
+  position: sticky;
+}
+
+.btn_gestion_demande {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.notification {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 8px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+}
+
+/* FIN HEADER */
+
+
+.main_accueil {
+  display: flex;
+  margin: 0;
+  background-image: url(../img/Logo.svg);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+  flex-direction: column;
+}
+
+.hello_div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hello_div>h1,
+.hello_div>h4 {
+  margin: 10px 0 0 0;
+}
+
+.champs_dates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form_P_P {
+  height: 100%;
+}
+
+/* Gestion des demandes */
+#popup {
+  border: solid 1px #000;
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid gray;
+  z-index: 9999;
+}
+
+.popupRefuser>form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab_gestion_demande {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div_gestion_demande{
+  display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.motif_popUp{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  resize: none;
+}
+
+  .btn_popUp{
+    text-align: center;
+    margin: 5px 0 0 0 ;
+  }
+
+.btn_popUp > button, .btn_popUp > input{
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  color: #333;
+  font-size: 18px;
+  padding: 8px 12px;
+  width: 250px;
+  margin: 10px 0;
+  background-color: #548043;
+  color: white;
+  transition: transform 1s ease;
+}
+
+.btn_popUp > button:hover, .btn_popUp > input:hover{
+  background-color: #ffffff;
+  color: #548043;
+  transition: all 1s ease;
+  transform: scale(1.1);
+  border: #333 solid 2px;
+}
+
+.btn_valider, .btn_refus{
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  color: #333;
+  font-size: 18px;
+  padding: 8px 12px;
+  width: 95px;
+  margin: 10px 0;
+  background-color: #548043;
+  color: white;
+  transition: transform 1s ease;
+}
+
+.btn_valider:hover, .btn_refus:hover{
+  background-color: #ffffff;
+  color: #548043;
+  transition: all 1s ease;
+  transform: scale(1.1);
+  border: #333 solid 2px;
+}
+/* Fin gestions des demandes */
+
+/* Historique des demandes */
+
+.tab_histo {
+  width: 95vw;
+  box-shadow: 2px 6px 4px 0 rgb(0 0 0 / 25%);
+}
+
+tbody>tr,
+tbody>tr>td,
+.tab_nom {
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #548043;
+  color: white;
+  padding: 8px;
+  font-size: x-large;
+}
+
+.tab_histo_decision,
+.tab_motif {
+  width: 500px;
+  padding: 10px;
+}
+
+.tab_index,
+.tab_histo_statut,
+.tab_dates {
+  text-align: center;
+  padding: 8px;
+}
+
+.tab_histo_validateur {
+  width: 180px;
+  text-align: center;
+}
+
+.historique_tab,
+.div_demande {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* FIN HISTORIQUE */
+
+/* Mes demandes */
+
+.tab_demandes {
+  width: 95vw;
+  box-shadow: 2px 6px 4px 0 rgb(0 0 0 / 25%);
+}
+
+.tab_demandes_index {
+  width: 43px;
+}
+
+.tab_demandes_dates {
+  width: 125px;
+}
+
+.tab_demandes_motif {
+  width: 500px;
+}
+
+.tab_demandes_btn {
+  width: 110px;
+}
+
+.reponse_submit,
+.tab_demandes_btn {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.tab_img_btn {
+  width: 40px;
+}
+
+.tab_img_btn:hover {
+  cursor: pointer;
+}
+
+
+/* FIN Mes demandes */
+
+/* Accueil */
+
+.tableau_accueil {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 50px;
+}
+
+.tab_accueil_nom,
+.tab_accueil_values {
+  text-align: center;
+  font-size: x-large;
+  margin: 0;
+  padding: 0;
+  background-color: #548043;
+  border: white solid 2px;
+  color: white;
+  padding: 5px;
+}
+
+.tab_accueil {
+  width: 100%;
+}
+
+.tab_accueil_CP,
+.tab_accueil_RTT {
+  width: 50%;
+}
+
+.soldes>h2,
+.derniers_conges_demandes>h2,
+.historique>h2 {
+  background-color: #548043;
+  color: white;
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+  border: solid 2px white;
+}
+
+.derniers_conges_demandes,
+.historique {
+  text-align: start;
+}
+
+.tab_motif {
+  text-align: left;
+  padding: 0 0 0 10px;
+  width: 500px;
+}
+
+.soldes,
+.derniers_conges_demandes,
+.historique {
+  margin-top: 30px;
+  box-shadow: 2px 6px 4px 0 rgb(0 0 0 / 25%);
+}
+
+/* FIN Accueil */
+
+/* Demande d'abscence */
+
+.demande_main {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 50px;
+}
+
+.soldes {
+  width: 300px;
+  text-align: center;
+  margin: 20px;
+}
+
+
+
+.form_conge {
+  display: flex;
+  align-self: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 8px 12px;
+  width: 800px;
+  margin: 0 50px;
+  background-color: #548043;
+}
+
+.form_conge>form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: inherit;
+}
+
+.form_conge_dates {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: 0 10%;
+}
+
+#date_debut,
+#date_fin,
+input[type="date"] {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 12px;
+}
+
+#motif {
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 12px;
+  width: 95%;
+  height: 100px;
+  margin: 25px 0;
+
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+  width: inherit;
+}
+
+.radio>section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.radio>section>label {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.btn_form_submit>button {
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  color: #333;
+  font-size: 18px;
+  padding: 8px 12px;
+  width: 200px;
+  margin: 25px 0;
+  background-color: #548043;
+  color: white;
+  transition: transform 1s ease;
+}
+
+.btn_form_submit>button:hover {
+  background-color: #ffffff;
+  color: #548043;
+  transition: all 1s ease;
+  transform: scale(1.1);
+  border: #333 solid 2px;
+}
+
+.print {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.print>button {
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  color: #333;
+  font-size: 18px;
+  padding: 8px 12px;
+  width: 100px;
+  margin: 0 25px 25px 0;
+  background-color: #548043;
+  color: white;
+  transition: transform 1s ease;
+}
+
+.print>button:hover {
+  background-color: #ffffff;
+  color: #548043;
+  transition: all 1s ease;
+  transform: scale(1.1);
+  border: #333 solid 2px;
+}
+
+@media print {
+
+  .btn_form_submit button:last-child,
+  .btn_form_submit,
+  header,
+  .print * {
+    display: none;
+  }
+
+  .demande_main *,
+  .soldes>h2 {
+    color: black;
+    margin: 0 20px;
+  }
+
+  #motif {
+    width: 90%;
+    margin: 5px 10px 0 0;
+  }
+}
+
+/* Edition demande */
+
+.form_edition {
+  display: flex;
+  flex-direction: column;
+  width: 636px;
+  background-color: #548043;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.form_edition_dates {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form_edition>select {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 12px;
+  width: 200px;
+  margin: 3px 0 25px 0;
+}
+
+.btn_edit_modif {
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  color: #333;
+  font-size: 18px;
+  padding: 8px 12px;
+  width: 200px;
+  margin: 25px 0;
+  background-color: #548043;
+  color: white;
+  transition: transform 1s ease;
+  align-self: center;
+}
+
+.btn_edit_modif:hover {
+  background-color: #ffffff;
+  color: #548043;
+  transition: all 1s ease;
+  transform: scale(1.1);
+  border: #333 solid 2px;
+}
+
+.edition_demande_form {
+  display: flex;
+  justify-content: center;
+}
+
+.form_label {
+  color: white;
+  font-size: 20px;
+}
+
+/* FIN Demande d'abscence */
+
+/* Page Profil */
+.infos_profil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  padding: 30px;
+  background-color: #548043;
+  border: #000 solid 2px;
+  border-radius: 20px;
+}
+
+.champs > button{
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  color: #333;
+  font-size: 18px;
+  padding: 8px 12px;
+  width: 250px;
+  margin: 25px 0;
+  background-color: #548043;
+  color: white;
+  transition: transform 1s ease;
+}
+
+.champs > button:hover{
+  background-color: #ffffff;
+  color: #548043;
+  transition: all 1s ease;
+  transform: scale(1.1);
+  border: #333 solid 2px;
+}
+
+.champs_submit{
+  text-align: center;
+}
+
+.page_profil_chgmntMDP{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0 0 0;
+  width: 50%;
+  background-color: #D9D9D9;
+  border: #000 solid 2px;
+  border-radius: 20px;
+}
+
+#nom, #prenom, #mail, #telephone, #matricule, #service{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 50px;
+}
+
+.infos_profil > section{
+  display: flex;
+  flex-direction: row;
+}
+
+.infos_profil * >p{
+  margin: 0 0 0 5px;
+}
+
+#prenom, #telephone{
+  margin: 0 0 0 30px
+}
+
+#nom, #prenom, #mail, #telephone, #matricule, #service, #mdp{
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 0 10px;
+  font-size: large;
+}
+
+.champs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.champs>input {
+  width: 90%;
+  height: 30px;
+  margin: 20px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  font-size: large;
+}
+
+.champs>label {
+  width: 100%;
+  text-align: left;
+  padding: 0 0 0 80px;
+}
