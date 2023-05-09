@@ -60,13 +60,16 @@ main {
 
 .partieGauche {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff;
   width: 50vw;
   height: 100vh;
 }
 
 .partieGauche>img {
-  width: 50vw;
+  width: 40vw;
 }
 
 .partieDroite {

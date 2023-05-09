@@ -13,6 +13,7 @@
     <main>
         <div class="partieGauche">
             <img src="publics/img/Logo.svg" alt="Logo_entreprise">
+            <img src="publics/img/Canopy.png" class="logo_canopy_connexion" alt="Logo_Canopy">
         </div>
         <div class="partieDroite">
             <!-- Formulaire de connexion matricule mot de passe bouton se connecter et mot de passe oublié -->
